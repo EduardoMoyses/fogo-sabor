@@ -1,0 +1,107 @@
+.container_Pai {
+    position: relative;
+    min-height: 66vh;
+    width: 100%;
+    background-color: var(--fundo-container-Pai);
+    margin-top: 10px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.container_Filho {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 94%;
+    max-width: 1200px;
+    background-color: var(--fundo-container-filho);
+    border-radius: 10px;
+    padding: 40px 10px 20px;
+}
+
+.container_Filho h2 {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+    color: var(--cor-texto-video);
+    background-color: var(--fundo-texto-video);
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--cor-borda-texto);
+}
+
+.container_Filho .paragrafo {
+    color: var(--cor-texto-video);
+    background: linear-gradient(to right,transparent, var(--fundo-texto-video) 20%,
+    var(--fundo-texto-video) 80%,transparent);
+    text-align: center;
+    font-size: 15px;
+    margin: 20px 0;
+    padding: 6px 10px;
+}
+
+.video_Pai {
+    width: 100%;
+    background-color: var(--fundo-video-Pai);
+    border-radius: 10px;
+}
+
+.video_Filho {
+    background-color: var(--fundo-video-Filho);
+    padding-top: 10px;
+    padding-bottom: 4px;
+    border-radius: 10px;
+}
+
+.video_container {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+    aspect-ratio: 16 / 9;
+    margin-bottom: 10px;
+}
+
+.video_container iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 90%;
+    height: 100%;
+    border-radius: 8px;
+    border: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    .container_Pai {
+        min-height: auto;
+        height: auto;
+        max-height: 439px;
+        display: flex;
+        align-items: center;
+        padding-top: 66px;
+        padding-bottom: 34px;
+    }
+
+    .container_Filho {
+        width: 90%;
+        padding: 0px 20px 12px;
+    }
+
+    .container_Filho .paragrafo {
+        font-size: 20px;
+        margin-top: 45px;
+    }
+}

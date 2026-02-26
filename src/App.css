@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --fundo-fogo: #7a4a2e;
+  --cor-destaque: #aa8456;
+  --destaque-dourado: #c9a26d;
+  --fundo-principal: #e0d9cf;
+  --fundo-card: #fff4e6;
+  --cor-borda: #e6d4bf;
+  --cor-texto-principal: #5a3622;
+  --texto-secundario: #8a6a55;
+  --cor-menu: #634c3d;
+  --texto-claro: white;
+  --fundo-destaque: #d8c1a6;
+
+  --fundo-container-Pai: #7c4725;
+  --fundo-container-filho: #ce9869;
+  --fundo-video-Pai: #834925;
+  --fundo-video-Filho: #723a17;
+  --fundo-texto-video: #874921;
+  --cor-texto-video: #f3e5d7;
+  --cor-borda-texto: #d89356;
+}
+
+body {
+  background-color: var(--fundo-principal);
+  font-family: "Inter", sans-serif;
+}
+
+html.travado, body.travado {
+  overflow: hidden;
+}

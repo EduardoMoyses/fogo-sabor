@@ -1,0 +1,68 @@
+.headerDefault {
+    height: 110px;
+    display: grid;
+    grid-template: 1fr / 80px 1fr auto;
+    align-items: center;
+    background-image: url('../../img/fundomadeira.png');
+    background-position: bottom center;
+    background-size: cover;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.253);
+    border-bottom: 2px solid var(--fundo-fogo);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+
+.headerDefault .titulo {
+    font-size: 1.6em;
+    white-space: nowrap;
+    color: white;
+    font-family: "Playfair Display";
+}
+
+.headerDefault .logo {
+   height: 107px;
+   width: 80px;
+}
+
+.headerLista {
+    height: 100px;
+    display: grid;
+    grid-template: 1fr / 1fr auto;
+    align-items: center;
+    background-image: url('../../img/fundomadeira.png');
+    background-position: bottom center;
+    background-size: cover;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.253);
+    border-bottom: 2px solid var(--fundo-fogo);
+}
+
+.headerLista .titulo {
+    font-size: 1.6em;
+    white-space: nowrap;
+    color: white;
+    font-family: "Playfair Display";
+    margin-left: 10px;
+}
+
+.headerLista .logo {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .headerDefault {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerLista {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+    .headerLista .titulo {
+        font-size: 3em;
+    }
+}

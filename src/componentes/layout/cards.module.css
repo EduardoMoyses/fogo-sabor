@@ -1,0 +1,70 @@
+.container {
+  width: 100%;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  gap: 6px 0px;
+  background-color: var(--cor-borda);
+  border-radius: 8px;
+  margin: 20px 3px 10px 10px;
+}
+
+.grid .imagem {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px 0px 0px 8px;
+    grid-area: 1 / 1 / 3;
+    background-position: center center;
+}
+
+
+.card h3 {
+  grid-area: 1 / 2;
+  margin: 0;
+  color: var(--cor-texto-principal);
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+
+
+.info{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  gap: 7px;
+  background-color: var(--cor-destaque);
+  padding: 3px;
+  color: var(--texto-claro);
+  border-radius: 0px 0px 8px 0px;
+  overflow-x: hidden;
+}
+
+.info > span {
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.info > span i {
+  flex-shrink: 0;
+}
+
+.link_Card {
+  white-space: nowrap;
+  flex-shrink: 0;
+  color: white;
+  text-decoration: none;
+}
+
+.link_Card, .info > span {
+  font-size: 0.84rem;
+  text-align: center;
+}
+
+.link_Card:hover {
+  text-decoration: underline;
+  font-weight: bolder;
+}

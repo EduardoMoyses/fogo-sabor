@@ -1,0 +1,102 @@
+.container {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo {
+    text-align: center;
+    color: var(--cor-texto-principal);
+    border-bottom: 1px solid var(--fundo-fogo);
+    margin-bottom: 10px;
+    width: 80%;
+}
+
+.imagem {
+   width: 280px;
+   border-radius: 10px;
+}
+
+.infos {
+    margin-top: 20px;
+    background-color: var(--fundo-fogo);
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--texto-claro);
+    margin-bottom: 30px;
+}
+
+.infos, .infos > span {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.listas {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.ingredientes,
+.preparo {
+    background-color: var(--fundo-card);
+    padding: 14px;
+    border-radius: 12px;
+    border-left: 4px solid var(--fundo-fogo);
+    color: var(--cor-texto-principal);
+    margin-bottom: 30px;
+    width: 70%;
+}
+
+
+.ingredientes li,
+.preparo li {
+    margin-bottom: 6px;
+    margin-left: 10px;
+    line-height: 1.4;
+}
+
+.video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video > iframe{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 600px) {
+    aside {
+        width: 100%;
+    }
+
+    .video {
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+    }
+
+.video > iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.imagem {
+    min-width: 400px;
+}
+}

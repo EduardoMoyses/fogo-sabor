@@ -1,0 +1,58 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img_principal {
+    height: 235px;
+    width: 290px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.botao {
+    margin-top: 20px;
+    width: 80%;
+    transition: transform 0.1s ease;
+}
+
+.botao > button {
+    cursor: pointer;
+    border-radius: 17px;
+}
+
+.botao:hover {
+    transform: scale(1.07) translateY(-2px);
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    background-color: var(--fundo-video);
+}
+
+.video h2 {
+    color: var(--cor-texto-principal);
+    background-color: var(--cor-borda);
+    font-weight: bold;
+    border: 1px solid rgba(0, 0, 0, 0.349);
+    border-radius: 15px;
+    padding: 10px 5px;
+    width: 90%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.paragrafo {
+    color: var(--fundo-principal);
+    font-weight: bolder;
+    background-color: color-mix(in srgb, var(--cor-texto-principal) 70%,transparent);
+    padding: 10px;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 15px;
+}

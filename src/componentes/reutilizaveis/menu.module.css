@@ -1,0 +1,101 @@
+.icon_Menu {
+  position: relative;
+  width: 40px;
+  height: 32px;
+  font-size: 25px;
+  color: #FFFFF0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.bar1, .bar2 {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* estado inicial */
+.bar1 {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+.bar2 {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.5);
+}
+
+/* quando menu abre */
+.icon_Menu.ativo .bar1 {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.5);
+}
+
+.icon_Menu.ativo .bar2 {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 99.5%;
+  height: 100%;
+  background-image: url('./../../img/fundomadeiraescura.png');
+  background-position: center center;
+  background-size: cover;
+  border-left: 2px solid var(--fundo-fogo);
+  transform: translateX(100%);
+  transition: transform 0.35s ease;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.menuAberto {
+  transform: translateX(0);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 80px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.459);
+}
+
+.menu li a:hover {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+
+  .icon_Menu {
+    width: 32px;
+  }
+  .menu {
+    width: 70%;
+  }
+
+  .menu ul {
+    align-items: flex-start;
+  }
+
+  .menu ul > li {
+    padding: 10px;
+  }
+}
