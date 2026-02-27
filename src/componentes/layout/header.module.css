@@ -1,7 +1,7 @@
 .headerDefault {
     height: 110px;
     display: grid;
-    grid-template: 1fr / 80px 1fr auto;
+    grid-template: 1fr / auto 1fr auto;
     align-items: center;
     background-image: url('../../img/fundomadeira.png');
     background-position: bottom center;
@@ -19,6 +19,7 @@
     white-space: nowrap;
     color: white;
     font-family: "Playfair Display";
+    justify-self: center;
 }
 
 .headerDefault .logo {
