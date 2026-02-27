@@ -7,6 +7,7 @@ import { useLocation } from 'react-router-dom'
 import imgfogo from './img/icone-fogo.png'
 import { useEffect, useState } from 'react'
 import './App.css'
+import ScrollToTop from './componentes/reutilizaveis/scroll'
 
 function App() {
   const location = useLocation();
@@ -24,6 +25,9 @@ function App() {
 
   return (
     <div id="app-container">
+
+    <ScrollToTop/>
+
       <Header titulo={titulo} fogo={imgfogo} className={isLista ? 'headerLista' : 'headerDefault'}/>
       <Routes>
         <Route path='/' element={<Conteudo/>}/>
