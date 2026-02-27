@@ -1,70 +1,83 @@
-.filtroContainer {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-rows: auto 1fr;
-    position: fixed;
-    top: 115px;
-    left: 10%;
-    height: 57%;
-    width: 75%;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: var( --fundo-card);
-
-    /*Código da animação*/
-
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    pointer-events: none;
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 115px;
+  z-index: 999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
 }
 
 .ativo {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: auto;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.filtroContainer {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  width: 75%;
+  height: 57%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: var(--fundo-card);
+
+  /* animação */
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+/* animação quando ativo */
+.ativo .filtroContainer {
+  transform: translateY(0);
 }
 
 .botaoFiltro > button {
-    display: block;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.637);
-    background-color: var(--destaque-dourado);
-    grid-column: 2;
-    grid-row: 1;
-    justify-self: end;
-    cursor: pointer;
+  display: block;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.637);
+  background-color: var(--destaque-dourado);
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: end;
+  cursor: pointer;
 }
 
 .filtroInfo {
-    grid-column: 1 / -1;
-    grid-row: 2;
+  grid-column: 1 / -1;
+  grid-row: 2;
 }
 
 .filtroInfo h2 {
-    color: var(--cor-texto-principal);
-    margin-bottom: 10px;
+  color: var(--cor-texto-principal);
+  margin-bottom: 10px;
 }
 
 .filtroInfo ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  list-style-type: none;
 }
 
 .filtroInfo li {
-    border: 1px solid rgba(0, 0, 0, 0.712);
-    border-radius: 8px;
-    padding: 5px;
-    color: var(--texto-secundario);
-    margin-bottom: 15px;
-    cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.712);
+  border-radius: 8px;
+  padding: 5px;
+  color: var(--texto-secundario);
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .filtroInfo li:hover {
-    font-size: 20px;
-    font-weight: bolder;
+  font-size: 20px;
+  font-weight: bolder;
 }
